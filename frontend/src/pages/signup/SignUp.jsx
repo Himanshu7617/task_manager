@@ -9,7 +9,7 @@ const SignUp = () => {
 
     async function handleSignUpSubmit(e){
         e.preventDefault();
-
+        
         const data = {userName, email, password, teamName};
         
     }
