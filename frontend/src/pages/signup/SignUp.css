@@ -63,3 +63,8 @@ input::placeholder{
     
 }
 
+.register-links{
+    position: absolute;
+    right: 1rem;
+    background-color: white;
+}

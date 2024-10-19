@@ -1,0 +1,39 @@
+*{
+    margin:0%;
+}
+
+.accordian-master-container{
+    height: fit-content;
+    font-family: 'Inter';
+}
+
+.title{
+    height: 3rem;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+.title > #icon{
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color:gray;
+}
+.title > p{
+    font-size: 1.2rem;
+}
+.summary{
+    height: 3rem;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    padding-left: 4rem;
+}
+.summary > p {
+    font-size: 1rem;
+    color: gray;
+}

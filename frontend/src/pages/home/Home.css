@@ -1,0 +1,176 @@
+@import url('../../components/accordian/Accordian.css');
+
+.hero-container{
+    height: fit-content;
+    
+    
+}
+
+/*styling the header div element*/
+
+
+.header-container{
+    padding-top: 5rem;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.header-container > h1{
+    font-family: 'Irish Grover';
+    font-size: 72px;
+}
+.tagline-container{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.tagline-container> p{
+    font-family: 'Inter';
+    font-size: 24px;
+    color: gray;
+
+}
+.tagline-container> Button{
+    height: fit-content;
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: black;
+    font-family: 'Irish Grover';
+    font-size: 18px;
+    color: #F7F7F7;
+}
+
+.tagline-container > Button:hover{
+    background-color: rgb(63, 63, 63);
+    color: white;
+}
+/*styling the hero section image*/
+
+.hero-img-container{
+    height: fit-content;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.hero-img-container>img{
+    height: 120vh;
+    margin-top: -10rem;
+    /* object-fit: contain; */
+    
+}
+
+/*Styling the about us section */
+
+.aboutus-container{
+    height: fit-content;
+    background-color: #F7F7F7;
+    padding-top:4rem;
+    padding-bottom: 4rem;
+}
+.wrap-content1, .wrap-content2{
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3rem;       
+    
+}
+
+
+.img1, .img2, .content1, .content2{
+    height: 70vh;
+    width: 40vw;
+}
+.img1 > img, .img2 > img{
+    height: 110%;
+    width: 110%;
+    object-fit: contain;
+}
+.content1, .content2{
+    display:flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 2rem;
+}
+.content1 > h2, .content2 > h2{
+    height: fit-content;
+    width: 110%;
+    font-family: 'Irish Grover';
+    font-size: 4rem;
+}
+.content1 > p, .content2 > p{
+    height: fit-content;
+    width: 50%;
+    font-family: 'Inter';
+    font-size: 1.4rem;
+    color: gray;
+}
+
+/*Designing the faq container*/
+
+
+.faq-container{
+    min-height: 70vh;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items :center;
+    flex-direction : column;
+    gap: 3rem;
+
+
+}
+.faq-container > h3{
+    font-family: "Inter";
+    font-size: 3rem;
+}
+
+
+
+.questions{
+    min-height: 50%;
+    height: fit-content;
+    width: 60vw;
+    background-color: #F7F7F7;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*footer */
+
+.footer-container{
+    height: 50vh;
+    background-color: #F7F7F7;
+    display : flex;
+    justify-content: space-evenly;
+    align-items : center;
+    flex-direction : column;
+    
+}
+
+.footer-container > h2 {
+    font-family: "Irish Grover";
+    font-size: 4rem;
+    margin-bottom: -3rem;
+}
+.footer-container > Button {
+    background-color: black;
+    font-family: 'Irish Grover';
+    font-size: 1.2rem;
+    color: #F7F7F7;
+}
+
+.footer-container > Button:hover {
+    background-color: rgb(63, 63, 63);
+    color: white;
+}

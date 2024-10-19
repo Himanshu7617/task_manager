@@ -56,6 +56,16 @@ const doThis = {
             console.error("Error in finding the team member", error.stack);
             throw error;
         }
+    },
+
+    addTask : async(task_desc, assigned_to, due_date) =>{
+        try {
+            await pool.query(`INSERT INTO tasks (task_desc, assigned_to, due_date) VALUES ($1, $2, $3)`, [task_desc, assigned_to, due_date]);
+            
+        } catch (error) {
+            console.error("Error storing the task to the database");
+            throw error;
+        }
     }
 }
 
