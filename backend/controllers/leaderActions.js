@@ -5,6 +5,8 @@ const path = require('path');
 require('dotenv').config({path : path.join(__dirname,'../.env' )});
 
 
+
+
 const leaderHandles = {
     signupLeader : async (req,res) => {
         const {first_name, last_name, email, team_name, password, role} = req.body;
@@ -21,7 +23,9 @@ const leaderHandles = {
             const newUser = await userDo.findByEmail(email);
             const token = await jwt.sign({user : newUser.id, role : newUser.role, team_name : newUser.team_name}, process.env.SECRET_KEY, {expiresIn : '3 days'});
 
-            return res.status(201).json({message: "sign up successful", token});
+
+            res.status(201).cookie("access_token", token, {maxAge: 8 * 360000});
+            return res.status(201).json({message: "sign up successful"});
 
         } catch (error) {
             console.error("Error during sign up", error.stack);
@@ -44,7 +48,13 @@ const leaderHandles = {
 
             const token = await jwt.sign({user : user.id, role : user.role, team_name: user.team_name}, process.env.SECRET_KEY, {expiresIn : '3 days'});
 
-            return res.status(201).json({message:"login successful", token});
+            res.status(201).cookie("access_token", token, { 
+                maxAge: 8 * 3600000,  // Cookie expiration time in milliseconds (8 hours)
+                // secure: process.env.NODE_ENV === 'production' || true, // set to true if you are in a production environment
+                // httpOnly: true, 
+            });
+
+            return res.status(201).json({message:"login successful"});
         } catch (error) {
             console.error("Error during login", error.stack);
             res.status(500).json({ message: "Server error during login" });
@@ -53,19 +63,19 @@ const leaderHandles = {
     },
 
     addMember : async (req, res) =>{
-            const {first_name, last_name, email, team_name, role, leaderId} = req.body;
+            const {first_name, last_name, email, team_name, role} = req.body;
             
             const member = await userDo.findByEmail(email);
 
             if(member) return res.status(404).json({message: "User already added"});
 
-            const leader = await userDo.findById(leaderId, role = "leader");
+            // const leader = await userDo.findById(leaderId, role = "leader");
 
-            if(!leader) return res.status(400).json({message: "couldn't find the leader with the given leader_id"});
+            // if(!leader) return res.status(400).json({message: "couldn't find the leader with the given leader_id"});
 
             
             try {
-                await userDo.addUser(first_name, last_name, email, team_name, role, leader.password);
+                await userDo.addUser(f_name = first_name, l_name = last_name, email =  email, team_name = team_name,role = role,password =  "member");
                 return res.status(201).json({message: "Team member created"});
             } catch (error) {
                 console.error("error in adding team member");
@@ -123,7 +133,7 @@ const leaderHandles = {
         }
     },
 
-    loginUser : async (req,res) => {
+    loginMember : async (req,res) => {
         const {email, team_name} = req.body;
 
         const user = await userDo.findByEmail(email);
@@ -135,7 +145,8 @@ const leaderHandles = {
 
             return res.status(200).json({message:"user logged in", token});
         } catch (error) {
-            
+            console.error("Error while logging the member", error.stack);
+            return res.status(500).json({message: "bad request"});
         }
     }
 }

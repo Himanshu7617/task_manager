@@ -1,70 +1,51 @@
-*{
-    margin: 0%;
-}
+@import url('../../components/persDetail/PersDetailForm.css');
+@import url('../../components/teamName/teamNameForm.css');
+@import url('../../components/addMember/AddMemberForm.css');
 
 .signup-master-container{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    flex-direction : column;
+    gap: 3rem;
+
 }
 
-.form-master-container{
+/* the process tracker */
+
+
+.process-container{
     height: fit-content;
     width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background: rgb(110,0,146);
-    background: linear-gradient(0deg, rgba(110,0,146,1) 0%, rgba(0,0,0,1) 100%);
-    border-radius: 20px;
-    border: solid 1px rgb(255, 205, 255);  
-    box-shadow: 1px 4px 10px 1px rgb(234, 124, 238);
-    
-    padding : 2rem;
-}
-.teamleader-form{
-    width: fit-content;
-}
-.credentials{
-    margin: 10px;
-    
-}
-input{
-    background: none;
-    outline: none;
-    border: none;
-    color: white;
-    
-}
-label{
-    color: white;
-    margin-right: 1rem;
-}
-input::placeholder{
-    color: rgb(154, 154, 154);
+    position: relative;
 
 }
-
-.teamleader-form> button{
-    height: fit-content;
-    width: 90%;
-    padding: 0.5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: black;
-    border: none;
-    outline: none;
-    color: white;
-    
+.process-container > .processes{
+    font-family: 'Inter';
+    font-size: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: #888888;
+}
+.process2{
+    border-left: 2px solid #888888;
+    border-right: 2px solid #888888;
+}
+.form-container{
+    height: 50vh;
+    /* border : 2px solid blue; */
 }
 
-.register-links{
-    position: absolute;
-    right: 1rem;
-    background-color: white;
+.tracker{
+    position : absolute;
+    height: 0.5rem;
+    width: .5rem;
+    background-color: rgb(70, 127, 248);
+    /* left: 0%; */
+    bottom: -1rem;
+    border-radius: 50%;   
 }

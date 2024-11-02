@@ -34,16 +34,15 @@ To do :
 
 1. FIRST MAKE THE FRONTEND A LIL APPEALING 
     
-    - make a signup page 
-    - make a login page
-    - make a dashboard for leader
-    - make a dashboard for member
-    - make a loader and error page too
-    - just a page that display admin panel written on it for now
+    - make a signup page - DONE
+    - make a login page - DONE
+    - make a dashboard - DONE
+    - make a loader and error page too (later)
+    - just a page that display admin panel written on it for now (later)
 
 2. SETUP THE BASIC BACKEND which is already running 
  
-    - set up the team member signing up this time too
+    - set up the team member signing up this time too - DONE Frontend
     - As for the middlewares 
         - when the user sends any request to add task, add member, delete anything then we have to check whether the user is the leader of the team or not 
         - At the time of logging in check whether the user is admin or not as in to show the admin panel
@@ -60,10 +59,17 @@ To do :
 
 5. DEVELOP THE ADMIN DASHBOARD
 
-    - learn how to display live users real time yk
+    - learn how to display live users real time yk (later)
 
 6. DEPLOY THE SHIT FOR NOW
 
 
 
 
+//dashboard designing for leader 
+requirements 
+    - add task (leader)
+    - show tasks (common )
+    - delete task (leader)
+    - add member (leader)
+    - 

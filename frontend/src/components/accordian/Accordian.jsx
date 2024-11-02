@@ -21,12 +21,8 @@ const Accordian = ({title, summary}) => {
                 ><IoAdd /></div>
                 <p>{title}</p>
             </div>
-            <div className="summary"
-                style={{
-                    maxHeight: expanded && summary ? '200px' : '0', // or any max height that fits the content
-                    overflow: 'hidden',
-                    transition: 'max-height 0.3s ease-in-out',
-                }}        >
+            <div className={expanded? "summary expanded" : "summary"}
+                >
                 <p>{summary}</p>
             </div>
         </div>

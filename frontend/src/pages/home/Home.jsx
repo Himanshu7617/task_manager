@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '@mui/material/Button';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+import Cookies from 'js-cookie'
 
 //importing images
 import heroIMG from '../../../assets/images/hero.png'
@@ -15,6 +16,16 @@ import faqs from '../../../assets/text/faq';
 const Home = () => {
 
     const navigate = useNavigate();
+
+    //checking for access token in the cookies 
+    useEffect(()=>{
+        const token = Cookies.get('access_token');
+        if(token){
+            navigate('/dashboard', {replace: true});
+        }
+
+    },[navigate])
+
     return (
         <div className='master-home-container'>
             {/*Desiging the header */}
@@ -77,7 +88,7 @@ const Home = () => {
             {/*Designin the footer section */}
             <footer className='footer-container'>
                 <h2>Stay on Track Together</h2>
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" onClick={()=>{navigate("/signup")}}>
                     Get Started
                 </Button>
             </footer>

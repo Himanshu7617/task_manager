@@ -1,5 +1,7 @@
 @import url('../../components/accordian/Accordian.css');
 
+
+
 .hero-container{
     height: fit-content;
     
@@ -74,7 +76,10 @@
     height: fit-content;
     background-color: #F7F7F7;
     padding-top:4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 14rem;
+}
+.content-container{
+    width: 100%;
 }
 .wrap-content1, .wrap-content2{
     height: 80vh;
@@ -105,13 +110,13 @@
     height: fit-content;
     width: 110%;
     font-family: 'Irish Grover';
-    font-size: 4rem;
+    font-size: 5rem;
 }
 .content1 > p, .content2 > p{
     height: fit-content;
     width: 50%;
     font-family: 'Inter';
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: gray;
 }
 
@@ -173,4 +178,197 @@
 .footer-container > Button:hover {
     background-color: rgb(63, 63, 63);
     color: white;
+}
+
+@media only screen and (min-width : 812px) and (max-width: 1199px) {
+    
+
+    /*hero section */
+
+    .hero-img-container>img{
+        height: 80vh;
+        margin-top: -6rem;
+    
+        
+    }
+
+    /* about us section */
+    .content-container{
+        width:100%;
+    }
+    .wrap-content1, .wrap-content2{
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    
+    .img1, .img2, .content1, .content2{
+        height: 50vh;
+        width: 40vw;
+    }
+   
+    .content1 > h2, .content2 > h2{
+        font-size: 3rem;
+    }
+    .content1 > p, .content2 > p{
+        font-size: 1.5rem;
+    }
+
+    /*footer*/
+
+    .footer-container > h2 {
+        font-size: 3rem;
+        margin-bottom: -5rem;
+    }
+    
+}
+
+
+@media only screen and (min-width : 390px) and (max-width: 812px) {
+    
+
+    /*hero section */
+    .header-container > h1{
+        font-size: 42px;
+    }
+
+    .tagline-container> p{
+        font-size: 14px;
+    
+    }
+    .tagline-container> Button{
+        font-size: 10px;
+    }
+
+    .hero-img-container>img{
+        height: 50vh;
+        margin-top: -3rem;
+    
+        
+    }
+
+    /* about us section */
+    .content-container{
+        width:100%;
+    }
+    .wrap-content1, .wrap-content2{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .wrap-content2 {
+        flex-direction: column-reverse;
+    }
+    
+    .img1, .img2, .content1, .content2{
+        height: fit-content;
+        width: 40vw;
+    }
+
+    .content1 > h2, .content2 > h2{
+        font-size: 1.5rem;
+    }
+    .content1 > p, .content2 > p{
+        font-size: .9rem;
+        width: 100%;
+    }
+
+    /*faq*/
+
+    
+    .faq-container > h3{
+        font-size: 2rem;
+    }
+    
+
+    /*footer*/
+
+    .footer-container > h2 {
+        font-size: 1.5rem;
+        margin-bottom: -7rem;
+    }
+    
+}
+
+@media only screen and (max-width: 390px) {
+    
+
+    /*hero section */
+    .header-container > h1{
+        font-size: 32px;
+    }
+
+    .tagline-container> p{
+        font-size: 10px;
+    
+    }
+    .tagline-container> Button{
+        font-size: 8px;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .hero-img-container>img{
+        height: 30vh;
+        margin-top: -2rem;
+    
+        
+    }
+
+    /* about us section */
+    .content-container{
+        width:100%;
+    }
+    .wrap-content1, .wrap-content2{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .wrap-content2 {
+        flex-direction: column-reverse;
+    }
+    
+    .img1, .img2, .content1, .content2{
+        height: fit-content;
+        width: 40vw;
+    }
+
+    .content1 > h2, .content2 > h2{
+        font-size: 1.5rem;
+    }
+    .content1 > p, .content2 > p{
+        font-size: .9rem;
+        width: 100%;
+    }
+
+    /*faq*/
+
+    
+    .faq-container > h3{
+        font-size: 1.5rem;
+    }
+    
+
+    /*footer*/
+
+    .footer-container > h2 {
+        font-size: 1rem;
+        margin-bottom: -9rem;
+    }
+    .footer-container > Button {
+      
+        font-size: 0.7rem;
+        
+    }
+    
+    
 }

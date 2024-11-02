@@ -29,11 +29,43 @@
 .summary{
     height: 3rem;
     width: 100%;
-    display:flex;
-    align-items: center;
+    display:none;
     padding-left: 4rem;
 }
 .summary > p {
     font-size: 1rem;
     color: gray;
+}
+.expanded {
+    height: auto;
+    overflow: hidden;
+    display: block;
+    transition: max-height 0.3s ease-in-out;
+}
+@media only screen and (min-width : 290px) and (max-width: 812px) {
+
+    .title > p{
+        font-size: 1rem;
+    }
+    .summary > p{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .title {
+        padding-left: .2rem;
+    }
+    .title > p{
+        font-size: 0.7rem;
+    }
+    .summary{
+        padding-left: 0;
+    }
+    .summary > p{
+        font-size: 0.5rem;
+    }
+    .title > #icon{
+        font-size: .9rem;
+    }
 }

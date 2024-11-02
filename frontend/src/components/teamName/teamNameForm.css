@@ -1,0 +1,71 @@
+*{
+    margin: 0%;
+}
+
+.teamName-master-container{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(182, 182, 182);
+    padding: 1rem;
+    padding-bottom: 7rem;
+    border-radius: 10px;
+}
+
+.teamName-container{
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: .5rem;
+    font-family: "Inter";
+    font-size: 1.2rem;
+    position:relative
+    
+}
+
+.teamName-container > form{
+    display: flex;
+   flex-direction : column;
+   gap: 1rem;
+}
+.credentials {
+   display : flex;
+   justify-content: space-between;
+   gap: 2rem
+}
+.credentials > input {
+   border : none;
+   outline : none;
+   border-bottom: 1px solid #888888;
+   font-size: 1.2rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   color: darkslategray;
+   background: none;
+   padding-bottom: .3rem;
+}
+.next-button, .back-button {
+   width: fit-content;
+   padding: .2rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   font-size: 1rem;
+   background-color: black;
+   color: white;
+   font-weight: bold;
+   border-radius: 5px;
+   position : absolute;
+   right: 1rem;
+   bottom: -5rem;
+}
+.back-button{
+    left: 1rem;
+}
+.teamName{
+   height: fit-content;
+   width: fit;
+
+   margin-top: 1rem;
+   color: rgb(123, 6, 6)
+}

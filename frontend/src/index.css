@@ -1,9 +1,8 @@
 @import url('./pages/signup/SignUp.css');
 @import url('./pages/login/Login.css');
 @import url('./pages/adminPanel/AdminPanel.css');
-@import url('./pages/leaderBoard/LeaderBoard.css');
-@import url('./pages/userBoard/UserBoard.css');
 @import url('./pages/home/Home.css');
+@import url('./pages/dashboard/Dashboard.css');
 
 
 
